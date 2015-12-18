@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}My Amazing Site{% endblock %}</title>
+
+    <!-- 부트스트랩 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static "mystyle.css" %}" />
+  </head>
+  <body>
+
+
+{% block contents %}
+
+<style>
+img {
+ float: left;
+}
+</style>
+
+<img src="https://www.google.co.kr/logos/doodles/2015/beethovens-245th-birthday-4687587541254144-hp.jpg"width="200"height="200"style="border:5 solid yellow"/>
+
+<table class="detail_profile" bordercolor = "BLACK">
+
+
+          <tr>
+              <td><FONT size="5"color="BLACK">이름  : </FONT></td>
+              <td><FONT size="5"color="BLACK">장현승</FONT></td>
+          </tr>
+          <tr>
+              <td><FONT size="5"color="BLACK">학번  : </FONT></td>
+              <td><FONT size="5"color="BLACK">2011136103</FONT></td>
+          </tr>
+          <tr>
+              <td><FONT size="5"color="BLACK">전공  : </FONT></td>
+              <td><FONT size="5"color="BLACK">컴퓨터공학부</FONT></td>
+          </tr>
+
+        
+          
+       </table>
+
+<a class="navbar-brand" href="{% url 'blog:index' %}">My Blog</a>
+<a class="navbar-brand" href="{% url 'admin:index' %}">Admin</a>
+
+
+{% endblock %}
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
