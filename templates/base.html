@@ -11,43 +11,95 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
     {% load static %}
     <link rel="stylesheet" href="{% static "mystyle.css" %}" />
+  
+      <style>
+    * {
+        text-align : center;
+    }
+    p {
+        padding-top:7px;
+    }
+    .table1 {
+        position: absolute;       
+        width : 150px;
+        margin : 5px;
+        left : 50%;
+    }
+    .table2 {
+        position: absolute;
+        width : 150px;
+        margin : 5px;
+        right : 50%;
+    }
+
+    </style>  
+ 
   </head>
   <body>
 
 
 {% block contents %}
+<br/>
+<!-- KOREATECH Logo -->
+<a href="http://www.koreatech.ac.kr" class="koreatech">
+    <img src={% static 'images\signature4.png' %} width="320" height="150" algin="center">
+</a>
 
-<style>
-img {
- float: left;
-}
-</style>
+<!-- Image -->
+<table align="center">
+    <tr>
+        <td>
+            <a>
+            <img src="{% static 'images\Eun_A.jpg' %}" width="200"height="200"/>
+             </a>
+        </td>
+        <td width="10"></td>
+        <td>
+            <a>
+              <img src="{% static 'images\Seong_Hui.jpg' %}" width="200"height="200"/></a> 
+        </td>
+    </tr>
+</table><br/>
 
-<img src="https://www.google.co.kr/logos/doodles/2015/beethovens-245th-birthday-4687587541254144-hp.jpg"width="200"height="200"style="border:5 solid yellow"/>
 
-<table class="detail_profile" bordercolor = "BLACK">
+<!-- Table -->
+<table class="table1" border="2">
+    <tr>
+        <td><h5>이름</h5></td>
+        <td><p>황성희</p></td>
+    </tr>
+    <tr>
+        <td><h5>학번</h5></td>
+        <td><p>2014180139</p></td>
+    </tr>
+    <tr>
+        <td><h5>전공</h5></td>
+        <td><p>산업경영학부</p></td>
+    </tr> 
+</table>
 
+<table class="table2" border="2">
+    <tr>
+        <td><h5>이름</h5></td>
+        <td><p>한은아</p></td>
+    </tr>
+    <tr>
+        <td><h5>학번</h5></td>
+        <td><p>2014180130</p></td>
+    </tr>
+    <tr>
+        <td><h5>전공</h5></td>
+        <td><p>산업경영학부</p></td>
+    </tr> 
+</table>
 
-          <tr>
-              <td><FONT size="5"color="BLACK">이름  : </FONT></td>
-              <td><FONT size="5"color="BLACK">장현승</FONT></td>
-          </tr>
-          <tr>
-              <td><FONT size="5"color="BLACK">학번  : </FONT></td>
-              <td><FONT size="5"color="BLACK">2011136103</FONT></td>
-          </tr>
-          <tr>
-              <td><FONT size="5"color="BLACK">전공  : </FONT></td>
-              <td><FONT size="5"color="BLACK">컴퓨터공학부</FONT></td>
-          </tr>
+<br/><br/><br/><br/><br/><br/><br/>
 
-        
-          
-       </table>
-
-<a class="navbar-brand" href="{% url 'blog:index' %}">My Blog</a>
-<a class="navbar-brand" href="{% url 'admin:index' %}">Admin</a>
-
+<!-- Button -->
+<center>
+<a class="navbar" href="{% url 'blog:index' %}" ><font size = "6" color = "red">My Blog</font></a>
+<a class="navbar" href="{% url 'admin:index' %}" ><font size = "4">Admin</font></a>
+</center>
 
 {% endblock %}
 
